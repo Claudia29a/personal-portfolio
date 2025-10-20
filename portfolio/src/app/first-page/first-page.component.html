@@ -1,24 +1,31 @@
-<div class="h-screen w-full flex items-center justify-center bg-customWhite relative overflow-hidden font-abhaya">
-    <!-- Diagonal custom dark brown background -->
-    <div class="absolute top-0 left-0 w-full h-full"
-        style="clip-path: polygon(0 0, 100% 0, 100% 47%, 0 100%); background-color: #632324; z-index: 1;"></div>
-    <!-- Portfolio Content -->
-    <div class="relative z-10 flex flex-col justify-between w-full h-full pl-14 pt-48 pb-12 max-w-full">
-        <div>
-            <h1 class="text-7xl font-abhaya text-customDarkBrown mb-8">Portfolio</h1>
-            <div class="mb-6">
-                <h2 class="text-2xl font-abhaya text-customDarkBrown">Cretu Claudia</h2>
-                <p class="text-xs font-abhayaMedium uppercase text-customDarkBrown mt-2 tracking-wide">
-                    FRONT END DEVELOPMENT | MOBILE APPLICATION DEVELOPMENT
-                </p>
-            </div>
+<div class="h-screen w-full flex items-center justify-center bg-customAmber relative overflow-hidden font-abhaya">
+    <!-- Diagonal background triangle on right side -->
+    <div class="absolute top-0 right-0 w-full h-full"
+        style="clip-path: polygon(100% 0, 0 0, 100% 100%); background-color: #632324; z-index: 1;">
+    </div>
+
+    <!-- Content container -->
+    <div class="relative z-10 flex flex-col justify-start w-full h-full px-8 pt-80 pb-12 max-w-7xl mx-auto">
+        <h1 class="text-5xl md:text-8xl font-abhaya font-bold text-customDarkBrown mb-4">Portfolio</h1>
+        <div class="mb-8">
+            <h2 class="text-xl md:text-4xl font-abhaya font-semibold text-customDarkBrown mb-4">Cretu Claudia</h2>
+            <p
+                class="text-xs md:text-sm font-abhayaMedium uppercase text-customDarkBrown tracking-widest whitespace-normal md:whitespace-nowrap max-w-full md:max-w-none">
+                FRONT END DEVELOPMENT
+                <br class="block md:hidden" />
+                | MOBILE APPLICATION DEVELOPMENT
+            </p>
+
+
         </div>
-        <div class="flex justify-end">
-            <a href="#portfolio"
-                class="text-customOrange text-lg font-abhayaMedium flex items-center group transition duration-200">
-                Browse my portfolio
-                <span class="ml-2 text-customOrange group-hover:translate-x-1 transition-transform">&rarr;</span>
-            </a>
-        </div>
+        <a href="expertise"
+            class="text-customBrownDark text-xl md:text-4xl font-abhayaMedium flex items-center transition-transform group hover:translate-x-2 duration-300">
+            Browse my portfolio
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-4 h-10 w-10 text-customOrange" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+        </a>
+
     </div>
 </div>
