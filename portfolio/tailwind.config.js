@@ -18,9 +18,7 @@ module.exports = {
         abhaya: ['"Abhaya Libre"', 'serif'],
         abhayaMedium: ['"Abhaya Libre"', 'serif'], // Use font-weight classes to differentiate medium weight
       },
-      fontSize: {
-        xxs: '0.625rem',    // custom font size smaller than xs, for mobile
-      },
+      
     },
   },
   plugins: [],
