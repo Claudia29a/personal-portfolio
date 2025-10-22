@@ -1,3 +1,168 @@
 .font-abhaya {
     font-family: 'Abhaya Libre', serif;
 }
+
+/* Mobile styles - matching the picture layout */
+@media (max-width: 767px) {
+
+    /* Main container - single column on mobile */
+    .mobile-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    /* Left panel takes full width on mobile */
+    .mobile-left-panel {
+        width: 100%;
+        /* Fill the visible viewport height on mobile (accounts for browser UI) */
+        min-height: 100dvh;
+        height: 100dvh;
+        padding: 1.5rem;
+        /* Ensure it can stretch within the flex container */
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+
+    /* Content wrapper adjustments for mobile */
+    .mobile-content {
+        display: block !important;
+        /* override Tailwind flex on mobile to allow wrapping */
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        padding: 0;
+        /* align-items only applies to flex; no effect now */
+    }
+
+    /* Title styling for mobile */
+    .mobile-title {
+        font-size: 1.875rem;
+        margin-bottom: 1rem;
+        padding: 12px;
+        margin-top: 0.5rem;
+        /* extra space before title on mobile */
+        margin-left: 8px;
+    }
+
+
+    /* Text paragraph for mobile */
+    .mobile-text {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    /* Extra spacing before the top line (hr) and overall top padding */
+    .mobile-left-panel {
+        padding-top: 2rem;
+        /* add a bit more top padding on mobile */
+    }
+
+    .mobile-left-panel hr {
+        margin-top: 0.75rem;
+        /* space before the line */
+    }
+
+    /* Two-column container on mobile (image left, text right) */
+    .mobile-two-col {
+        display: flex;
+        align-items: stretch;
+        /* make text column match image height */
+        gap: 0.75rem;
+        width: 100%;
+        margin: 0.25rem 0 0.75rem 0;
+    }
+
+    .mobile-text-col {
+        flex: 1 1 0%;
+        min-width: 0;
+        /* allow text to wrap nicely */
+        display: flex;
+        /* stretch container to match row height */
+        align-items: flex-start;
+        align-self: stretch;
+        /* ensure full height equal to image */
+    }
+
+    /* Fine-tune the first paragraph next to the picture */
+    .mobile-two-col .mobile-text-col .mobile-text:first-child {
+        max-width: 22ch;
+        /* target ~4 lines on common mobile widths */
+        margin-top: 0.680rem;
+        margin-left: 20px;
+        /* nudge text a bit down */
+    }
+
+    .mobile-below-text {
+        margin-top: 0.5rem;
+    }
+
+    /* Image+text row on mobile */
+    .mobile-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        width: 100%;
+        margin: 0.5rem 0 0.75rem 0;
+    }
+
+    /* Image with frame styling */
+    .mobile-image {
+        max-width: 40vw;
+        max-height: 230px;
+        object-fit: cover;
+        border: 8px solid #632324;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-right: 18px;
+        margin-top: -10px;
+        margin-bottom: 40px;
+        /* handled by gap in row */
+        flex-shrink: 0;
+    }
+
+    /* Ensure normal flow after the mobile row */
+    .mobile-content::after {
+        content: "";
+        display: block;
+    }
+
+    /* Footer positioning on mobile */
+    .mobile-footer {
+        margin-top: auto;
+        padding-top: 1.4rem;
+        /* Center footer content on mobile */
+        justify-content: center !important;
+        text-align: center;
+        gap: 0.75rem;
+        /* space between items */
+    }
+
+    /* Navigation arrows on mobile - at bottom */
+    .mobile-nav-left {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        top: auto;
+        transform: none;
+    }
+
+    .mobile-nav-right {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        top: auto;
+        transform: none;
+    }
+
+    /* Hide the dark background panel on mobile */
+    .hide-on-mobile {
+        display: none;
+    }
+
+    /* Center the small "Portfolio" header text on mobile */
+    .mobile-left-panel h6 {
+        text-align: center;
+        width: 100%;
+    }
+}
