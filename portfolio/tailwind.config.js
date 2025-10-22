@@ -13,6 +13,7 @@ module.exports = {
         customWhite: '#FFFFFF',
         customAmber: '#F8E0BB',
         customBrownDark: '#923B27',
+        customYellow: '#FDBA52',
       },
       fontFamily: {
         abhaya: ['"Abhaya Libre"', 'serif'],
