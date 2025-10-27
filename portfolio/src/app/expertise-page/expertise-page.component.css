@@ -1,1 +1,65 @@
-/* Expertise page styles */
+.font-abhaya {
+    font-family: 'Abhaya Libre', serif;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    /* Full height on mobile */
+    .mobile-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+    }
+
+    /* Left panel on mobile */
+    .mobile-left-panel {
+        width: 100%;
+        min-height: 50vh;
+        padding: 1.5rem;
+    }
+
+    /* Right panel on mobile */
+    .mobile-right-panel {
+        width: 100%;
+        min-height: 50vh;
+        padding: 1.5rem;
+    }
+
+    /* Center Portfolio header on mobile */
+    h6 {
+        text-align: center;
+    }
+
+    /* Center footer on mobile */
+    .mobile-footer {
+        justify-content: center !important;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    /* Navigation arrows at bottom on mobile */
+    .mobile-nav-left {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        top: auto;
+        transform: none;
+    }
+
+    .mobile-nav-right {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        top: auto;
+        transform: none;
+    }
+
+    /* Adjust expertise card spacing on mobile */
+    .expertise-card {
+        padding: 1rem 0;
+    }
+
+    .expertise-card h3 {
+        font-size: 1.5rem;
+    }
+}
