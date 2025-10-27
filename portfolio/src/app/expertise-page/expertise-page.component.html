@@ -22,29 +22,51 @@
       </div>
 
       <!-- Mobile expertise cards inside amber section -->
-      <div class="block md:hidden w-full mt-4 bg-customDarkBrown p-4 rounded-lg">
-        <!-- Expertise Card 1 -->
-        <div class="border-t border-customYellow pt-4 pb-4">
-          <h3 class="text-xl font-semibold text-customYellow mb-1">Mobile developer</h3>
-          <p class="text-xs text-customYellow opacity-90">WildlifeNL</p>
+      <div class="block md:hidden w-full mt-4">
+        <!-- Show cards list when nothing is expanded -->
+        <div *ngIf="!isExpanded" class="bg-customDarkBrown p-4 rounded-lg cursor-pointer hover:opacity-90 transition-opacity" (click)="expandPanel()">
+          <!-- Expertise Card 1 -->
+          <div class="border-t border-customYellow pt-4 pb-4 text-center">
+            <h3 class="text-xl font-semibold text-customYellow mb-1">Mobile developer</h3>
+            <p class="text-xs text-customYellow opacity-90">WildlifeNL</p>
+          </div>
+
+          <!-- Expertise Card 2 -->
+          <div class="border-t border-customYellow pt-4 pb-4 text-center">
+            <h3 class="text-xl font-semibold text-customYellow mb-1">UX designer/Full stack developer</h3>
+            <p class="text-xs text-customYellow opacity-90">LiveWall</p>
+          </div>
+
+          <!-- Expertise Card 3 -->
+          <div class="border-t border-customYellow pt-4 pb-4 text-center">
+            <h3 class="text-xl font-semibold text-customYellow mb-1">UX designer/Frontend developer</h3>
+            <p class="text-xs text-customYellow opacity-90">Handpicked</p>
+          </div>
+
+          <!-- Expertise Card 4 -->
+          <div class="border-t border-customYellow pt-4 pb-4 border-b text-center">
+            <h3 class="text-xl font-semibold text-customYellow mb-1">UX designer</h3>
+            <p class="text-xs text-customYellow opacity-90">Branding project</p>
+          </div>
         </div>
 
-        <!-- Expertise Card 2 -->
-        <div class="border-t border-customYellow pt-4 pb-4">
-          <h3 class="text-xl font-semibold text-customYellow mb-1">UX designer/Full stack developer</h3>
-          <p class="text-xs text-customYellow opacity-90">LiveWall</p>
-        </div>
+        <!-- Expanded full text view -->
+        <div *ngIf="isExpanded" class="bg-customDarkBrown p-6 rounded-lg relative">
+          <!-- Close button -->
+          <button (click)="closePanel()" class="absolute top-4 right-4 text-customYellow text-2xl hover:opacity-80 transition-opacity z-10">
+            &#x2715;
+          </button>
 
-        <!-- Expertise Card 3 -->
-        <div class="border-t border-customYellow pt-4 pb-4">
-          <h3 class="text-xl font-semibold text-customYellow mb-1">UX designer/Frontend developer</h3>
-          <p class="text-xs text-customYellow opacity-90">Handpicked</p>
-        </div>
-
-        <!-- Expertise Card 4 -->
-        <div class="border-t border-customYellow pt-4 pb-4 border-b">
-          <h3 class="text-xl font-semibold text-customYellow mb-1">UX designer</h3>
-          <p class="text-xs text-customYellow opacity-90">Branding project</p>
+          <!-- Full desktop text -->
+          <div class="pr-8">
+            <p class="text-base text-customYellow leading-relaxed">
+              My studies and work experience have focused on UX design, frontend web development and full stack mobile
+              development, as well as user research and end-to-end testing. I've contributed to projects such as ticket
+              order systems, photo blogs, and AI-powered story-telling apps, bringing creativity and technical skill to each
+              one. I also have experience with backend technologies like Node.js and NoSQL databases, always approaching my
+              work with a user-focused, problem-solving mindset.
+            </p>
+          </div>
         </div>
       </div>
     </div>
