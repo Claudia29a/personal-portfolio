@@ -4,42 +4,47 @@
 
 /* Mobile styles */
 @media (max-width: 767px) {
-    /* Full height on mobile */
-    .mobile-container {
-        display: flex;
-        flex-direction: column;
-        min-height: 100dvh;
-    }
-
-    /* Left panel on mobile */
+    /* Mobile left panel with amber background - full screen */
     .mobile-left-panel {
         width: 100%;
-        min-height: 50vh;
+        min-height: 100dvh;
+        height: 100dvh;
         padding: 1.5rem;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
     }
 
-    /* Right panel on mobile */
-    .mobile-right-panel {
-        width: 100%;
-        min-height: 50vh;
-        padding: 1.5rem;
+    /* Mobile title styling */
+    .mobile-title {
+        font-size: 1.875rem;
+        margin-bottom: 1rem;
+        text-align: left;
     }
 
-    /* Center Portfolio header on mobile */
-    h6 {
+     /* Center the small "Portfolio" header text on mobile */
+    .mobile-left-panel h6 {
         text-align: center;
+        width: 100%;
+        padding: 8px;
     }
 
-    /* Center footer on mobile */
+    
+
+  /* Footer positioning on mobile */
     .mobile-footer {
+        margin-top: auto;
+        padding-top: 1.4rem;
+        /* Center footer content on mobile */
         justify-content: center !important;
         text-align: center;
         gap: 0.75rem;
+        /* space between items */
     }
 
     /* Navigation arrows at bottom on mobile */
     .mobile-nav-left {
-        position: fixed;
+        position: absolute;
         bottom: 1rem;
         left: 1rem;
         top: auto;
@@ -47,19 +52,10 @@
     }
 
     .mobile-nav-right {
-        position: fixed;
+        position: absolute;
         bottom: 1rem;
         right: 1rem;
         top: auto;
         transform: none;
-    }
-
-    /* Adjust expertise card spacing on mobile */
-    .expertise-card {
-        padding: 1rem 0;
-    }
-
-    .expertise-card h3 {
-        font-size: 1.5rem;
     }
 }
