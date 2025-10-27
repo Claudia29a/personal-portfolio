@@ -49,4 +49,15 @@ export class ProjectsPageComponent {
     goToSlide(index: number) {
         this.currentSlide = index;
     }
+
+    // Mobile popup state
+    showMobilePopup: boolean = false;
+
+    openPopup() {
+        this.showMobilePopup = true;
+    }
+
+    closePopup() {
+        this.showMobilePopup = false;
+    }
 }
