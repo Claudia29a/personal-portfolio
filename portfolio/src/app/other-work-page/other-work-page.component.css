@@ -3,4 +3,23 @@
   .mobile-left-panel {
     min-height: 100dvh;
   }
+
+  /* Footer positioning on mobile */
+    .mobile-footer {
+        margin-top: auto;
+        padding-top: 1.4rem;
+        /* Center footer content on mobile */
+        justify-content: center !important;
+        text-align: center;
+        gap: 0.75rem;
+        /* space between items */
+    }
+
+      /* Center the small "Portfolio" header text on mobile */
+    .mobile-left-panel h6 {
+        text-align: center;
+        width: 100%;
+        padding: 4px;
+    }
+    
 }
