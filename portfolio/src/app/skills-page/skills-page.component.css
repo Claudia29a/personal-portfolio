@@ -1,0 +1,6 @@
+/* Mobile specific styles */
+@media (max-width: 767px) {
+  .mobile-left-panel {
+    min-height: 100dvh;
+  }
+}
