@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-first-page',
+    standalone: true,
+    imports: [RouterModule], // <-- add this
     templateUrl: './first-page.component.html',
-    styleUrls: ['./first-page.component.css']
 })
 export class FirstPageComponent { }

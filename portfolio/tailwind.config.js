@@ -11,13 +11,15 @@ module.exports = {
         customGrayLight: '#D9D9D9',
         customBlack: '#000000',
         customWhite: '#FFFFFF',
-        customAmber: '#FDBA52',
+        customAmber: '#F8E0BB',
         customBrownDark: '#923B27',
+        customYellow: '#FDBA52',
       },
       fontFamily: {
         abhaya: ['"Abhaya Libre"', 'serif'],
         abhayaMedium: ['"Abhaya Libre"', 'serif'], // Use font-weight classes to differentiate medium weight
       },
+      
     },
   },
   plugins: [],
