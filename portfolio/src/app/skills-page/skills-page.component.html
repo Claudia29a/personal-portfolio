@@ -66,50 +66,55 @@
           <!-- Technical Section -->
           <div>
             <h3 class="uppercase tracking-wider font-semibold mb-3 text-base">Technical</h3>
-            <div class="grid grid-cols-3 gap-3">
-              <div class="aspect-square overflow-hidden rounded-lg">
-                <img src="assets/wildlife.jpg" alt="Wildlife" class="w-full h-full object-cover">
+            <button (click)="openPopup('technical')" class="w-full overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-105 relative" style="aspect-ratio: 5/1;">
+              <img src="assets/wildlife.jpg" alt="Technical" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <span class="text-white text-sm font-semibold uppercase tracking-wider">Read More</span>
               </div>
-              <div class="aspect-square overflow-hidden rounded-lg">
-                <img src="assets/livewall.png" alt="Livewall" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-square overflow-hidden rounded-lg">
-                <img src="assets/breda.png" alt="Breda" class="w-full h-full object-cover">
-              </div>
-            </div>
+            </button>
           </div>
 
           <!-- Professional Section -->
           <div>
             <h3 class="uppercase tracking-wider font-semibold mb-3 text-base">Professional</h3>
-            <div class="grid grid-cols-3 gap-3">
-              <div class="aspect-square overflow-hidden rounded-lg">
-                <img src="assets/studio.png" alt="Studio" class="w-full h-full object-cover">
+            <button (click)="openPopup('professional')" class="w-full overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-105 relative" style="aspect-ratio: 5/1;">
+              <img src="assets/studio.png" alt="Professional" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <span class="text-white text-sm font-semibold uppercase tracking-wider">Read More</span>
               </div>
-              <div class="aspect-square overflow-hidden rounded-lg">
-                <img src="assets/trendradar.png" alt="Trendradar" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-square overflow-hidden rounded-lg">
-                <img src="assets/acdc.png" alt="ACDC" class="w-full h-full object-cover">
-              </div>
-            </div>
+            </button>
           </div>
 
           <!-- Research Section -->
           <div>
             <h3 class="uppercase tracking-wider font-semibold mb-3 text-base">Research</h3>
-            <div class="grid grid-cols-3 gap-3">
-              <div class="aspect-square overflow-hidden rounded-lg">
-                <img src="assets/musicapp.png" alt="Music App" class="w-full h-full object-cover">
+            <button (click)="openPopup('research')" class="w-full overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-105 relative" style="aspect-ratio: 5/1;">
+              <img src="assets/musicapp.png" alt="Research" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <span class="text-white text-sm font-semibold uppercase tracking-wider">Read More</span>
               </div>
-              <div class="aspect-square overflow-hidden rounded-lg">
-                <img src="assets/petapp.png" alt="Pet App" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-square overflow-hidden rounded-lg">
-                <img src="assets/photoblog.png" alt="Photo Blog" class="w-full h-full object-cover">
-              </div>
-            </div>
+            </button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Popup Modal -->
+    <div *ngIf="showMobilePopup" class="block md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+      <!-- Popup Modal -->
+      <div class="bg-customYellow rounded-lg p-6 max-w-md w-full max-h-[80vh] overflow-y-auto relative">
+        <!-- Close button -->
+        <button (click)="closePopup()"
+          class="absolute top-4 right-4 text-customDarkBrown text-2xl hover:opacity-80 transition-opacity">
+          &#x2715;
+        </button>
+
+        <!-- Popup content -->
+        <div class="pr-8">
+          <h3 class="text-xl font-semibold text-customDarkBrown mb-4 uppercase">{{ selectedCategory }}</h3>
+          <ul class="space-y-2 list-disc list-inside text-sm text-customDarkBrown">
+            <li *ngFor="let skill of getSkillsList()">{{ skill }}</li>
+          </ul>
         </div>
       </div>
     </div>

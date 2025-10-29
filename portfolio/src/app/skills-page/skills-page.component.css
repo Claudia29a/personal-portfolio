@@ -7,7 +7,7 @@
    /* Footer positioning on mobile */
     .mobile-footer {
         margin-top: auto;
-        padding-top: 0.4rem;
+        padding-top: 1.8rem;
         /* Center footer content on mobile */
         justify-content: center !important;
         text-align: center;
