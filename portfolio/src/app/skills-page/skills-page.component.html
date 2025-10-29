@@ -135,6 +135,15 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
       </svg>
     </button>
+
+    <!-- Right nav arrow - visible on mobile inside left panel -->
+    <button [routerLink]="['/contact']" aria-label="Next"
+      class="block md:hidden absolute bottom-4 right-4 text-customOrange hover:text-customYellow transition-colors duration-300 mobile-nav-right">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        stroke-width="3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
   </div>
 
   <!-- Right panel - Desktop only -->
@@ -171,5 +180,14 @@
         <img src="assets/photoblog.png" alt="Photo Blog" class="w-full h-full object-cover">
       </div>
     </div>
+
+    <!-- Right nav arrow - desktop only -->
+    <button [routerLink]="['/contact']" aria-label="Next"
+      class="absolute top-1/2 -translate-y-1/2 right-8 text-customOrange hover:text-customYellow transition-colors duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        stroke-width="3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
   </div>
 </div>

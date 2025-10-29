@@ -5,6 +5,7 @@ import { ExpertisePageComponent } from './expertise-page/expertise-page.componen
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { OtherWorkPageComponent } from './other-work-page/other-work-page.component';
 import { SkillsPageComponent } from './skills-page/skills-page.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 export const routes: Routes = [
     { path: '', component: FirstPageComponent },
@@ -12,5 +13,6 @@ export const routes: Routes = [
     { path: 'expertise', component: ExpertisePageComponent },
     { path: 'projects', component: ProjectsPageComponent },
     { path: 'other-work', component: OtherWorkPageComponent },
-    { path: 'skills', component: SkillsPageComponent }
+    { path: 'skills', component: SkillsPageComponent },
+    { path: 'contact', component: ContactPageComponent }
 ];
