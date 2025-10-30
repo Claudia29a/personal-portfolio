@@ -8,11 +8,11 @@ import { SkillsPageComponent } from './skills-page/skills-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 
 export const routes: Routes = [
-    { path: '', component: FirstPageComponent },
-    { path: 'introduction', component: IntroductionPageComponent },
-    { path: 'expertise', component: ExpertisePageComponent },
-    { path: 'projects', component: ProjectsPageComponent },
-    { path: 'other-work', component: OtherWorkPageComponent },
-    { path: 'skills', component: SkillsPageComponent },
-    { path: 'contact', component: ContactPageComponent }
+    { path: '', component: FirstPageComponent, data: { animation: 'HomePage' } },
+    { path: 'introduction', component: IntroductionPageComponent, data: { animation: 'IntroductionPage' } },
+    { path: 'expertise', component: ExpertisePageComponent, data: { animation: 'ExpertisePage' } },
+    { path: 'projects', component: ProjectsPageComponent, data: { animation: 'ProjectsPage' } },
+    { path: 'other-work', component: OtherWorkPageComponent, data: { animation: 'OtherWorkPage' } },
+    { path: 'skills', component: SkillsPageComponent, data: { animation: 'SkillsPage' } },
+    { path: 'contact', component: ContactPageComponent, data: { animation: 'ContactPage' } }
 ];

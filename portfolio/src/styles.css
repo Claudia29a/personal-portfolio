@@ -3,3 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  perspective: 2500px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+}
+
