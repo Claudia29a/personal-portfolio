@@ -2,10 +2,14 @@
   "buildCommand": "cd portfolio && npm install && npm run build:static",
   "outputDirectory": "portfolio/dist/portfolio/browser",
   "installCommand": "npm install --prefix ./portfolio",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*\\.(css|js|svg|png|jpg|jpeg|gif|ico|woff|woff2|ttf|eot))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
