@@ -13,9 +13,9 @@ export class OtherWorkPageComponent {
     currentSlide: number = 0;
     
     slides: string[] = [
-        'assets/wildlife.jpg',
-        'assets/livewall.png',
-        'assets/breda.png',
+        'assets/lifetoon.png',
+        'assets/portf.png',
+        'assets/proxy.png',
     ];
 
     nextSlide() {

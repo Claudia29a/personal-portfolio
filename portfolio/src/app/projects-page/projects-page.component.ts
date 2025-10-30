@@ -19,10 +19,23 @@ export class ProjectsPageComponent {
         'assets/studio.png',
         'assets/trendradar.png',
         'assets/acdc.png',
-        'assets/musicapp.png',
-        'assets/petapp.png',
+        'assets/playlist.jpg',
+        'assets/petapp.jpg',
         'assets/photoblog.png',
         'assets/senzor.png'
+    ];
+
+    projectTitles: string[] = [
+        'WildlifeNL - Mobile App Development',
+        'LiveWall - AI Storytelling App',
+        'Breda Media Campaign',
+        'Studio Frontend & UX',
+        'TrendRadar - Flutter App',
+        'ACDC - Ticket System',
+        'Music Player App',
+        'Pet Matching App',
+        'Photography Blog',
+        'Sensor Throw Game'
     ];
 
     projectTexts: string[] = [

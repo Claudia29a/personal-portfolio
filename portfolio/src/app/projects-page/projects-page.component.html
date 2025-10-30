@@ -9,7 +9,8 @@
 
     <div class="flex-1 flex flex-col justify-center ml-0 md:ml-20">
       <div class="mt-0 md:-mt-32">
-        <h2 class="text-3xl md:text-4xl font-semibold mb-6 md:mb-12 mobile-title">Projects</h2>
+        <h2 class="text-3xl md:text-4xl font-semibold mb-2 mobile-title">Projects</h2>
+        <h3 class="text-lg md:text-xl font-medium mb-4 md:mb-8 text-customDarkBrown">{{ projectTitles[currentSlide] }}</h3>
       </div>
 
       <!-- Project Description Text - Desktop Only -->
@@ -69,7 +70,7 @@
 
         <!-- Popup content -->
         <div class="pr-8">
-          <h3 class="text-xl font-semibold text-customDarkBrown mb-4">Project {{ currentSlide + 1 }}</h3>
+          <h3 class="text-xl font-semibold text-customDarkBrown mb-2">{{ projectTitles[currentSlide] }}</h3>
           <p class="text-sm leading-relaxed text-customDarkBrown">
             {{ projectTexts[currentSlide] }}
           </p>
@@ -113,8 +114,8 @@
       <!-- Slides -->
       <div class="relative overflow-hidden rounded-lg mb-6" style="aspect-ratio: 16/9;">
         <div *ngFor="let slide of slides; let i = index" [class.hidden]="currentSlide !== i"
-          class="w-full h-full absolute inset-0">
-          <img [src]="slide" [alt]="'Project ' + (i + 1)" class="w-full h-full object-contain">
+          class="w-full h-full absolute inset-0 rounded-lg">
+          <img [src]="slide" [alt]="'Project ' + (i + 1)" class="w-full h-full object-contain rounded-lg">
         </div>
       </div>
 
