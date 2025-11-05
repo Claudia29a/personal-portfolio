@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-  "build:css": "npx tailwindcss -i src/styles.css -o src/styles.css --minify",
-  "build": "npm run build:css && ng build --configuration production --output-mode static --base-href /",
-  "build:static": "npm run build:css && ng build --configuration production --output-mode static --base-href /",
+    "build:css": "npx tailwindcss -i src/styles.css -o src/styles.css --minify",
+    "build": "npm run build:css && ng build --configuration production --output-mode static --base-href /",
+    "build:static": "npm run build:css && ng build --configuration production --output-mode static --base-href /",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs"
@@ -36,6 +36,7 @@
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "angular-cli-ghpages": "^2.0.3",
     "autoprefixer": "^10.4.21",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
