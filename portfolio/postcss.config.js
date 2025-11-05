@@ -1,7 +1,9 @@
 module.exports = {
-  plugins: [
-    // Use the new PostCSS adapter for Tailwind (require it so the build picks up the function)
-    require('@tailwindcss/postcss'),
-    require('autoprefixer'),
-  ],
+  plugins: {
+    // Angular's stylesheet plugin expects plugin names as keys. Map the
+    // `tailwindcss` key to the new adapter function so the build system
+    // doesn't try to use `tailwindcss` directly as a PostCSS plugin.
+    tailwindcss: require('@tailwindcss/postcss'),
+    autoprefixer: require('autoprefixer'),
+  },
 }
