@@ -3,7 +3,7 @@
     {
       "src": "portfolio/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist/portfolio" }
+      "config": { "distDir": "dist/portfolio/browser" }
     }
   ]
 }
