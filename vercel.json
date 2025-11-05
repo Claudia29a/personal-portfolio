@@ -1,14 +1,18 @@
 {
-  "buildCommand": "cd portfolio && npm install && npm run build:static",
-  "outputDirectory": "portfolio/dist/portfolio/browser",
-  "installCommand": "npm install --prefix ./portfolio",
+  "builds": [
+    {
+      "src": "portfolio/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/portfolio/browser" }
+    }
+  ],
   "routes": [
     {
-      "src": "/(.*\\.(css|js|svg|png|jpg|jpeg|gif|ico|woff|woff2|ttf|eot))",
+      "src": "/(.*\\.(css|js|svg|png|jpg|jpeg|gif|ico|woff|woff2|ttf|eot))$",
       "dest": "/$1"
     },
     {
-      "src": "/(.*)",
+      "src": "/(.*)$",
       "dest": "/index.html"
     }
   ]
